@@ -1,0 +1,45 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+.wrapper
+{
+	display: flex;
+	position: relative;
+	margin-top: 100px;
+}
+.wrapper .sidebar
+{
+	position: fixed;
+	width: 200px;
+	height: 80%;
+	background: #4b4567;
+	padding: 30px 0;
+	
+}
+.wrapper .sidebar ul li
+{
+	padding: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0,0.05);
+	border-top: 1px solid rgba(225,225,225,0.05);
+}
+.wrapper .sidebar ul li a
+{
+	color: #cef;
+	display: block;
+	text-decoration: none;
+}
+.wrapper .sidebar ul li a:hover
+{
+	background: #eef;
+	border-radius: 25px;
+	color: black;
+	padding: 15px;
+}
+.wrapper .sidebar ul li.active a
+{
+	color: black;
+	background-color:#eee;
+	padding: 15px;
+}

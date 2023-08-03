@@ -1,0 +1,47 @@
+<?php session_start();?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Login Here</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body style="background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.8)),url(''); height: 100vh; background-size: cover; margin-top: 4%;">
+	<form method="post" action="valid_forgot_pass.php">
+		<h1> <center> <font color="black"> Forgot Password </font> </center> </h1>
+		<table align="center" height=230 width="400"> 
+			<tr>
+				<td align="center"> <h3> Email : </h3> </td>
+				<td><input type="email" name="em_email" autocomplete="off" required></td>
+			</tr> 
+			<tr>
+				<td align="center"> <h3>Password :</h3> </td>
+				<td><input type="password" name="pa_pass" autocomplete="off" required></td>
+			</tr>
+			<tr>
+				<td align="center"> <h3>Confirme Password :</h3> </td>
+				<td><input type="password" name="pa_cpass" autocomplete="off" required></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="btn_submit" value="Change"></td>
+			</tr>
+			<br><br>
+			<tr>
+				<td colspan="2" align="center"><a href="ad_login.php"><font color="white"> <b> LOGIN</b> </font></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<?php
+					if(isset($_SESSION['loginerror']))
+					{
+						echo $_SESSION['loginerror'];
+					} 
+					unset($_SESSION['loginerror']);
+					?>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
